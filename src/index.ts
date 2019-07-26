@@ -1,5 +1,8 @@
-import App from 'src/vue-components/App.vue'
+import App from 'src/index-component/app.vue'
 import Vue from 'vue'
+
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap'
 
 var elem = document.createElement('div')
 elem.id = 'app'
@@ -10,5 +13,8 @@ var vue = new Vue({
   components: {
     App
   },
-  template: '<App></App>'
+  template: '<App ref="app"></App>',
+  mounted () {
+    ;(this.$refs.app as Vue).$emit('update_cache')
+  }
 })

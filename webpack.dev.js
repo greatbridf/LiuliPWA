@@ -13,7 +13,7 @@ module.exports = merge(config.config, {
     }),
   ],
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
+    contentBase: path.join(__dirname, 'static'),
     compress: true,
     port: 9000,
     inline: true

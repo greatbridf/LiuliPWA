@@ -40,6 +40,10 @@ const config = {
       {
         test: /\.vue$/i,
         loader: 'vue-loader'
+      },
+      {
+        test: /\.(png|jpg|svg|gif)$/i,
+        loader: 'file-loader'
       }
     ]
   },
